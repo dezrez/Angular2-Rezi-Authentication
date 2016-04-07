@@ -5,6 +5,7 @@ An example of Angular 2 and Typescript for authenticating with the Dezrez Rezi C
 ## Installation
 
 npm install
+
 typings install
 
 ## Usage
