@@ -37,8 +37,9 @@ export class App {
       public negotiatorService: NegotiatorService,
       public appState: AppState,
       public router: Router
-  ) {}
-  
+  ) {
+  }
+
   ngOnInit() {
     if (localStorage.getItem(constants.AUTH_TOKEN)) {
       this.negotiatorService.Me().subscribe(
@@ -48,14 +49,13 @@ export class App {
         },
         err => { 
           console.error(err);
-          //this.router.navigate(['Login']);
         }
       );
     }
     var url: string = window.location.search;
     var authCode: string = this.authService.GetAndSetCode(url);
     if (authCode) {
-      this.authService.GetToken(authCode).subscribe(t => window.location.reload(true));
+        this.authService.GetToken(authCode).subscribe(t => window.location.reload(true));
     }
   }
 }

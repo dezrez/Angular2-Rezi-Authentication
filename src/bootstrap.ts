@@ -29,4 +29,4 @@ if (process.env.ENV !== 'build') {
     ngHmr.hotModuleReplacement(main, module);
 }
 
-document.addEventListener('DOMContentLoaded', main);
+main();
