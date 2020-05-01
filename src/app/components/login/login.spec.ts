@@ -1,7 +1,6 @@
 import {
   it,
   describe,
-  expect,
   inject,
   beforeEachProviders
 } from 'angular2/testing';
@@ -30,7 +29,7 @@ describe('Login Component', () => {
 
 
   it('should have an authService', inject([Login], (login: Login) => {
-    expect(login.authService).not.toBeNull();
+    expect(login.authService).toBeTruthy();
   }));
 
 });

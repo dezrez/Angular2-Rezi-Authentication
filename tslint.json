@@ -3,24 +3,24 @@
     "class-name": true,
     "curly": true,
     "eofline": true,
-    "indent": "spaces",
+    "indent": [true, "spaces"],
     "max-line-length": false,
     "member-ordering": [
-      true,
-      "public-before-private",
-      "static-before-instance",
-      "variables-before-functions"
+			true,
+			{
+				"order": [
+					"statics-first"
+				]
+			}
     ],
     "no-arg": true,
     "no-construct": true,
-    "no-duplicate-key": true,
     "no-duplicate-variable": true,
     "no-empty": true,
     "no-eval": true,
     "no-trailing-whitespace": false,
     "no-unused-expression": true,
     "no-unused-variable": true,
-    "no-unreachable": true,
     "no-use-before-declare": true,
     "one-line": [
       true,
